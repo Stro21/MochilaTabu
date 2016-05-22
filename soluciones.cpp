@@ -4,12 +4,13 @@
 
 using namespace std;
 
-Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu)
+Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu, Objeto *obj)
 {
   cant_soluciones = cant;
   mochila = bag;
   soluciones = new *Solucion();
   soluciones[0] = tabu;
+  lista_obj = obj;
 }
 
 Soluciones::llenar_soluciones ()
@@ -18,11 +19,11 @@ Soluciones::llenar_soluciones ()
   int random = 0;
   for (int i = 0; i < cant_soluciones; i++){
     while (peso < mochila.get_peso_max()) {
-      random = rand() % total_tipos_objetos;
+      random = rand() % cant_tipo_obj;
       if(peso + lista_obj[random].get_peso() <= mochila.get_peso_max()){
         peso = peso + lista_obj[random].get_peso();
-        total_soluciones[i].set_peso_total(peso);
-        total_soluciones[i].set_valor_total(total_soluciones[i].get_valor_total() + lista_obj[random].get_valor());
+        soluciones[i].set_peso_total(peso);
+        soluciones[i].set_valor_total(soluciones[i].get_valor_total() + lista_obj[random].get_valor());
       }
       else{
         break;
@@ -33,10 +34,10 @@ Soluciones::llenar_soluciones ()
 
 soluciones::tabu_search()
 {
-  Solucion tabu = total_soluciones[0];
+  Solucion tabu = soluciones[0];
   for(int i = 1; i < cant_soluciones; i++){
-    if(tabu.get_valor_total() < total_soluciones[i].get_valor_total()){
-      tabu = total_soluciones[i];
+    if(tabu.get_valor_total() < soluciones[i].get_valor_total()){
+      tabu = soluciones[i];
     }
   }
   return tabu;

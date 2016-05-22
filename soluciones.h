@@ -11,6 +11,7 @@ private:
   Mochila mochila;
   Solucion *soluciones;
   int tipos_obj;
+  Objeto *lista_obj;
 public:
   Soluciones(int cant, Mochila bag, Solucion tabu);
   void llenar_soluciones();
