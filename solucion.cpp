@@ -41,3 +41,9 @@ void Solucion::set_cantidad_de_obj(int i, int c)
 {
   objetos[i].set_cantidad(c);
 }
+
+void Solucion::print_solucion() {
+  for (int i = 0; i < cant_tipo_obj; i++) {
+    objetos[i].print_objeto();
+  }
+}

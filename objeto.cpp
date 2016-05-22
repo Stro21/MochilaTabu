@@ -24,9 +24,15 @@ void Objeto::set_cantidad(int c)
   cantidad = c;
 }
 
-Objeto::Objeto(int p, int v, int c)
+Objeto::Objeto(int p, int v, int c, string name)
 {
   peso = p;
   valor = v;
   cantidad = c;
+  nombre = name;
+}
+
+void Objeto::print_objeto()
+{
+  cout << "Tiene " << cantidad << " " << nombre << endl;
 }

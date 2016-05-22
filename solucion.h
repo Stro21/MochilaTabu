@@ -22,6 +22,7 @@ public:
     return objetos;
   }
   void set_cantidad_de_obj(int c, int i);
+  void print_solucion();
 };
 
 #endif
