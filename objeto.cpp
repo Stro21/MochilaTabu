@@ -11,7 +11,7 @@ int Objeto::get_peso()
 
 int Objeto::get_valor()
 {
-  return valor
+  return valor;
 }
 
 int Objeto::get_cantidad()

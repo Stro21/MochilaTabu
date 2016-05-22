@@ -37,12 +37,7 @@ int Solucion::get_cant_tipo_obj()
   return cant_tipo_obj;
 }
 
-*Objeto Solucion::get_objetos()
-{
-  return objetos;
-}
-
-void Solucion::set_cantidad_de_obj(int i)
+void Solucion::set_cantidad_de_obj(int i, int c)
 {
   objetos[i].set_cantidad(c);
 }

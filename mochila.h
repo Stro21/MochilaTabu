@@ -8,6 +8,6 @@ private:
 public:
   Mochila(int pm);
   int get_peso_max();
-}
+};
 
 #endif

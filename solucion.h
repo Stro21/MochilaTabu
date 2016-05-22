@@ -17,9 +17,11 @@ public:
   int get_valor_total();
   void set_valor_total(int v);
   int get_cant_tipo_obj();
-  *Objeto get_objetos();
-  void set_cantidad_de_obj(int c, int i);
+  Objeto *get_objetos()
+  {
+    return objetos;
   }
-}
+  void set_cantidad_de_obj(int c, int i);
+};
 
 #endif

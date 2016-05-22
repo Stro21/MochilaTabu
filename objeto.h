@@ -13,6 +13,6 @@ public:
   int get_valor();
   int get_cantidad();
   void set_cantidad(int c);
-}
+};
 
 #endif
