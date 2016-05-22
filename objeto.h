@@ -17,6 +17,7 @@ public:
   int get_cantidad();
   void set_cantidad(int c);
   void print_objeto();
+  void print_data();
 };
 
 #endif

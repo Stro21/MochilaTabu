@@ -36,3 +36,11 @@ void Objeto::print_objeto()
 {
   cout << "Tiene " << cantidad << " " << nombre << endl;
 }
+
+void Objeto::print_data()
+{
+  cout << "Nombre: " << nombre << endl;
+  std::cout << "Peso: " << peso << std::endl;
+  std::cout << "Valor: " << valor << std::endl;
+  std::cout << "Cantidad: " << cantidad << std::endl;
+}
