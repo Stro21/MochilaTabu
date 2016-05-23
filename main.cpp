@@ -5,9 +5,9 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-  Objeto obj1(6, 7, 6, "Notebook");
-  Objeto obj2(2, 3, 0, "Estuche");
-  Objeto obj3(3, 5, 0, "Cuaderno");
+  Objeto obj1(6, 7, 1, "Notebook");
+  Objeto obj2(2, 3, 1, "Estuche");
+  Objeto obj3(3, 5, 1, "Cuaderno");
   Mochila knapsack(41);
   Objeto obj[3];
   obj[0] = obj1;
@@ -16,6 +16,10 @@ int main(int argc, char* argv[])
   Solucion tabu1(obj[0].get_peso() * obj[0].get_cantidad(),
   obj[0].get_valor() * obj[0].get_cantidad(), 3, obj, knapsack);
   tabu1.print_solucion();
+  std::cout << std::endl;
+  for(int i = 0; i < 3; i++){
+    obj[i].set_cantidad(0);
+  }
   Soluciones tabu(7, knapsack, tabu1, 3, obj);
   tabu.llenar_soluciones();
   Solucion tabu2 = tabu.tabu_search();

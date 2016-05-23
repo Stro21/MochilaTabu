@@ -23,6 +23,7 @@ public:
   void print_solucion();
   int peso_max();
   Solucion();
+  void incre_cantidad_obj(int i);
 };
 
 #endif

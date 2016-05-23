@@ -9,9 +9,9 @@ class Soluciones
 private:
   int cant_soluciones;
   Mochila mochila;
-  Solucion soluciones[];
+  Solucion *soluciones;
   int tipos_obj;
-  Objeto lista_obj[];
+  Objeto *lista_obj;
 public:
   Soluciones(int cant, Mochila bag, Solucion tabu, int tipo, Objeto obj[]);
   void llenar_soluciones();

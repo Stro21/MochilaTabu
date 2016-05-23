@@ -62,3 +62,7 @@ void Solucion::print_solucion() {
 int Solucion::peso_max(){
   return mochila.get_peso_max();
 }
+
+void Solucion::incre_cantidad_obj(int i) {
+  objetos[i].inc_cantidad();
+}

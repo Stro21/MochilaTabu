@@ -1,6 +1,7 @@
 #include "soluciones.h"
 #include <string>
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -8,9 +9,12 @@ Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu, int tipo, Objeto ob
 {
   cant_soluciones = cant;
   mochila = bag;
-  soluciones = new Solucion[cant_soluciones];
+  soluciones = new Solucion[cant];
   soluciones[0] = tabu;
-  lista_obj = obj;
+  lista_obj = new Objeto[tipo];
+  for(int i = 0; i < tipo; i++){
+    lista_obj[i] = obj[i];
+  }
   tipos_obj = tipo;
 }
 
@@ -20,11 +24,12 @@ void Soluciones::llenar_soluciones ()
   int random = 0;
   for (int i = 0; i < cant_soluciones; i++){
     while (peso < mochila.get_peso_max()) {
-      random = rand() % cant_tipo_obj;
+      random = rand() % tipos_obj;
       if(peso + lista_obj[random].get_peso() <= mochila.get_peso_max()){
         peso = peso + lista_obj[random].get_peso();
         soluciones[i].set_peso_total(peso);
         soluciones[i].set_valor_total(soluciones[i].get_valor_total() + lista_obj[random].get_valor());
+        soluciones[i].incre_cantidad_obj(random);
       }
       else{
         break;

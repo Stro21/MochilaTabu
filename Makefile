@@ -1,7 +1,7 @@
 all: knapsack_tabu
 
-knapsack_tabu: solucion.o mochila.o objeto.o main.o
-			g++ solucion.o main.o mochila.o objeto.o  -g -o knapsack_tabu
+knapsack_tabu: solucion.o mochila.o objeto.o soluciones.o main.o
+			g++ solucion.o main.o mochila.o objeto.o soluciones.o -g -o knapsack_tabu
 
 
 solucion.o: solucion.cpp solucion.h

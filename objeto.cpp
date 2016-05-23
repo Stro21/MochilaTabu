@@ -48,3 +48,8 @@ void Objeto::print_data()
   std::cout << "Valor: " << valor << std::endl;
   std::cout << "Cantidad: " << cantidad << std::endl;
 }
+
+void Objeto::inc_cantidad()
+{
+  cantidad = cantidad + 1;
+}

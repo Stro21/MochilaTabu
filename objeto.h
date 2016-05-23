@@ -19,6 +19,7 @@ public:
   void print_objeto();
   void print_data();
   Objeto();
+  void inc_cantidad();
 };
 
 #endif
