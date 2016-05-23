@@ -4,16 +4,17 @@
 
 using namespace std;
 
-Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu, Objeto *obj)
+Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu, int tipo, Objeto obj[])
 {
   cant_soluciones = cant;
   mochila = bag;
-  soluciones = new *Solucion();
+  soluciones = new Solucion[cant_soluciones];
   soluciones[0] = tabu;
   lista_obj = obj;
+  tipos_obj = tipo;
 }
 
-Soluciones::llenar_soluciones ()
+void Soluciones::llenar_soluciones ()
 {
   int peso = 0;
   int random = 0;
@@ -32,7 +33,7 @@ Soluciones::llenar_soluciones ()
   }
 }
 
-soluciones::tabu_search()
+Solucion Soluciones::tabu_search()
 {
   Solucion tabu = soluciones[0];
   for(int i = 1; i < cant_soluciones; i++){

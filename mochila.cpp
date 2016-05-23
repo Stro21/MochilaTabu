@@ -13,3 +13,8 @@ int Mochila::get_peso_max()
 {
   return peso_max;
 }
+
+Mochila::Mochila()
+{
+  
+}

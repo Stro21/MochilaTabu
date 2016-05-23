@@ -4,6 +4,10 @@
 
 using namespace std;
 
+Objeto::Objeto(){
+
+}
+
 int Objeto::get_peso()
 {
   return peso;
