@@ -15,8 +15,7 @@ int main(int argc, char* argv[])
   obj[2] = obj3;
   Solucion tabu1(obj[0].get_peso() * obj[0].get_cantidad(),
   obj[0].get_valor() * obj[0].get_cantidad(), 3, obj, knapsack);
-  tabu1.print_solucion();
-  std::cout << std::endl;
+  // tabu1.print_solucion();
   for(int i = 0; i < 3; i++){
     obj[i].set_cantidad(0);
   }

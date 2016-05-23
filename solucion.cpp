@@ -66,3 +66,13 @@ int Solucion::peso_max(){
 void Solucion::incre_cantidad_obj(int i) {
   objetos[i].inc_cantidad();
 }
+
+Solucion::Solucion(Objeto obj[], Mochila m, int cant_ti)
+{
+  peso_total = 0;
+  valor_total = 0;
+  cant_tipo_obj = cant_ti;
+  objetos = new Objeto[cant_ti];
+  objetos = obj;
+  mochila = m;
+}

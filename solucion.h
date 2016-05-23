@@ -24,6 +24,7 @@ public:
   int peso_max();
   Solucion();
   void incre_cantidad_obj(int i);
+  Solucion(Objeto obj[], Mochila m, int cant_ti);
 };
 
 #endif

@@ -10,7 +10,11 @@ Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu, int tipo, Objeto ob
   cant_soluciones = cant;
   mochila = bag;
   soluciones = new Solucion[cant];
+  Solucion sol(obj, bag, tipo);
   soluciones[0] = tabu;
+  for(int j = 1; j < cant; j++){
+    soluciones[j] = sol;
+  }
   lista_obj = new Objeto[tipo];
   for(int i = 0; i < tipo; i++){
     lista_obj[i] = obj[i];
