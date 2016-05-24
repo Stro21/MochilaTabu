@@ -1,16 +1,17 @@
 #include "solucion.h"
 #include <string>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-Solucion::Solucion(int p, int v, int c, Objeto obj[], Mochila k)
+Solucion::Solucion(int p, int v, int c, vector<Objeto> obj, Mochila k)
 {
   peso_total = p;
   valor_total = v;
   cant_tipo_obj = c;
   mochila = k;
-  objetos = new Objeto[cant_tipo_obj];
+  objetos.reserve(c);
   for(int i = 0; i < c; i++){
     objetos[i] = obj[i];
   }
@@ -67,12 +68,12 @@ void Solucion::incre_cantidad_obj(int i) {
   objetos[i].inc_cantidad();
 }
 
-Solucion::Solucion(Objeto obj[], Mochila m, int cant_ti)
+Solucion::Solucion(vector<Objeto> obj, Mochila m, int cant_ti)
 {
   peso_total = 0;
   valor_total = 0;
   cant_tipo_obj = cant_ti;
-  objetos = new Objeto[cant_ti];
+  objetos.reserve(cant_ti);
   objetos = obj;
   mochila = m;
 }

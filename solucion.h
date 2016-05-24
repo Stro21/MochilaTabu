@@ -11,10 +11,10 @@ private:
   int peso_total;
   int valor_total;
   int cant_tipo_obj;
-  Objeto *objetos;
   Mochila mochila;
+  std::vector<Objeto> objetos;
 public:
-  Solucion(int p, int v, int c, Objeto obj[], Mochila k);
+  Solucion(int p, int v, int c, std::vector<Objeto> obj, Mochila k);
   int get_peso_total();
   void set_peso_total(int p);
   int get_valor_total();
@@ -25,7 +25,7 @@ public:
   int peso_max();
   Solucion();
   void incre_cantidad_obj(int i);
-  Solucion(Objeto obj[], Mochila m, int cant_ti);
+  Solucion(std::vector<Objeto> obj, Mochila m, int cant_ti);
 };
 
 #endif

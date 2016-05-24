@@ -2,20 +2,21 @@
 #include <string>
 #include <iostream>
 #include <stdlib.h>
+#include <vector>
 
 using namespace std;
 
-Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu, int tipo, Objeto obj[])
+Soluciones::Soluciones(int cant, Mochila bag, Solucion tabu, int tipo, vector<Objeto> obj)
 {
   cant_soluciones = cant;
   mochila = bag;
-  soluciones = new Solucion[cant];
+  soluciones.reserve(cant);
   Solucion sol(obj, bag, tipo);
   soluciones[0] = tabu;
   for(int j = 1; j < cant; j++){
     soluciones[j] = sol;
   }
-  lista_obj = new Objeto[tipo];
+  lista_obj.reserve(tipo);
   for(int i = 0; i < tipo; i++){
     lista_obj[i] = obj[i];
   }
