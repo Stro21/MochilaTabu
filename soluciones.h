@@ -16,6 +16,7 @@ public:
   Soluciones(int cant, Mochila bag, Solucion tabu, int tipo, Objeto obj[]);
   void llenar_soluciones();
   Solucion tabu_search();
+  void print_soluciones();
 };
 
 #endif

@@ -26,7 +26,7 @@ void Soluciones::llenar_soluciones ()
 {
   int peso = 0;
   int random = 0;
-  for (int i = 0; i < cant_soluciones; i++){
+  for (int i = 1; i < cant_soluciones; i++){
     while (peso < mochila.get_peso_max()) {
       random = rand() % tipos_obj;
       if(peso + lista_obj[random].get_peso() <= mochila.get_peso_max()){
@@ -51,4 +51,12 @@ Solucion Soluciones::tabu_search()
     }
   }
   return tabu;
+}
+
+void Soluciones::print_soluciones()
+{
+  for(int i = 0; i < cant_soluciones; i++){
+    soluciones[i].print_solucion();
+    cout << endl;
+  }
 }

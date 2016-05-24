@@ -15,12 +15,15 @@ int main(int argc, char* argv[])
   obj[2] = obj3;
   Solucion tabu1(obj[0].get_peso() * obj[0].get_cantidad(),
   obj[0].get_valor() * obj[0].get_cantidad(), 3, obj, knapsack);
-  // tabu1.print_solucion();
+  tabu1.print_solucion();
+  std::cout << std::endl;
   for(int i = 0; i < 3; i++){
     obj[i].set_cantidad(0);
   }
   Soluciones tabu(7, knapsack, tabu1, 3, obj);
   tabu.llenar_soluciones();
+  tabu.print_soluciones();
+  std::cout << std::endl;
   Solucion tabu2 = tabu.tabu_search();
   tabu2.print_solucion();
   return 0;
