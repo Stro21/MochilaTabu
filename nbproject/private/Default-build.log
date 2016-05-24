@@ -1,0 +1,6 @@
+g++ -Wall -g -c solucion.cpp
+g++ -Wall -g -c mochila.cpp
+g++ -Wall -g -c objeto.cpp
+g++ -Wall -g -c soluciones.cpp
+g++ -Wall -g -c main.cpp
+g++ solucion.o main.o mochila.o objeto.o soluciones.o -g -o knapsack_tabu
