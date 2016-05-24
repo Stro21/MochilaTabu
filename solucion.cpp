@@ -51,9 +51,9 @@ void Solucion::set_cantidad_de_obj(int i, int c)
 }
 
 void Solucion::print_solucion() {
-  std::cout << "El peso de la solucion tabu es de " << peso_total << std::endl;
-  std::cout << "El valor de la solucion tabu es de " << valor_total << std::endl;
-  std::cout << "Peso maximo de la mochila es de " << peso_max() << std::endl;
+  cout << "El peso de la solucion tabu es de " << peso_total << endl;
+  cout << "El valor de la solucion tabu es de " << valor_total << endl;
+  cout << "Peso maximo de la mochila es de " << peso_max() << endl;
   for (int i = 0; i < cant_tipo_obj; i++) {
     objetos[i].print_objeto();
   }

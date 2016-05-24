@@ -3,15 +3,17 @@
 
 #include <string>
 
+using namespace std;
+
 class Objeto
 {
 private:
   int peso;
   int valor;
   int cantidad;
-  std::string nombre;
+  string nombre;
 public:
-  Objeto (int p, int v, int c, std::string nombre);
+  Objeto (int p, int v, int c, string nombre);
   int get_peso();
   int get_valor();
   int get_cantidad();

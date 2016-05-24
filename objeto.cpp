@@ -44,9 +44,9 @@ void Objeto::print_objeto()
 void Objeto::print_data()
 {
   cout << "Nombre: " << nombre << endl;
-  std::cout << "Peso: " << peso << std::endl;
-  std::cout << "Valor: " << valor << std::endl;
-  std::cout << "Cantidad: " << cantidad << std::endl;
+  cout << "Peso: " << peso << endl;
+  cout << "Valor: " << valor << endl;
+  cout << "Cantidad: " << cantidad << endl;
 }
 
 void Objeto::inc_cantidad()

@@ -3,6 +3,7 @@
 
 #include "objeto.h"
 #include "mochila.h"
+#include <vector>
 
 class Solucion
 {
