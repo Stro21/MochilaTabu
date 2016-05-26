@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Mochila::Mochila(int cant, int pm, Solucion tabu, int tipo, std::vector<Objeto> obj)
+Mochila::Mochila(int cant, int pm, Iteracion tabu, int tipo, std::vector<Objeto> obj)
 {
     peso_max = pm;
     cant_soluciones = cant;
@@ -40,11 +40,11 @@ int Mochila::GetTipos_obj() const {
     return tipos_obj;
 }
 
-void Mochila::SetSoluciones(std::vector<Solucion> soluciones) {
+void Mochila::SetSoluciones(std::vector<Iteracion> soluciones) {
     this->soluciones = soluciones;
 }
 
-std::vector<Solucion> Mochila::GetSoluciones() const {
+std::vector<Iteracion> Mochila::GetSoluciones() const {
     return soluciones;
 }
 
@@ -76,9 +76,9 @@ void Mochila::llenar_soluciones ()
 }
 
 
-Solucion Mochila::tabu_search()
+Iteracion Mochila::tabu_search()
 {
-    Solucion tabu = soluciones[0];
+    Iteracion tabu = soluciones[0];
     for(int i = 1; i < cant_soluciones; i++){
         if(tabu.getValor_total() < soluciones[i].getValor_total()
             && this->menor_que_mochila(soluciones[i].getPeso_total())){

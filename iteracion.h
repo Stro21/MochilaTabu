@@ -1,10 +1,10 @@
-#ifndef SOLUCION_H
-#define SOLUCION_H
+#ifndef ITERACION_H
+#define ITERACION_H
 
 #include "objeto.h"
 #include <vector>
 
-class Solucion
+class Iteracion
 {
 private:
     int peso_total;
@@ -12,9 +12,9 @@ private:
     int cant_tipo_obj;
     std::vector<Objeto> objetos;
 public:
-    Solucion(int c, std::vector<Objeto> obj);
+    Iteracion(int c, std::vector<Objeto> obj);
     void print_solucion();
-    Solucion(){}
+    Iteracion(){}
     void setObjetos(std::vector<Objeto> objetos);
     std::vector<Objeto> getObjetos() const;
     void setCant_tipo_obj(int cant_tipo_obj);

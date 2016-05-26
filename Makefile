@@ -1,11 +1,11 @@
 all: knapsack_tabu
 
-knapsack_tabu: solucion.o mochila.o objeto.o main.o
-			g++ solucion.o main.o mochila.o objeto.o -g -o knapsack_tabu
+knapsack_tabu: iteracion.o mochila.o objeto.o main.o
+			g++ iteracion.o main.o mochila.o objeto.o -g -o knapsack_tabu
 
 
-solucion.o: solucion.cpp solucion.h
-			g++ -Wall -g -c solucion.cpp
+iteracion.o: iteracion.cpp iteracion.h
+			g++ -Wall -g -c iteracion.cpp
 
 mochila.o : mochila.cpp mochila.h
 		g++ -Wall -g -c mochila.cpp
