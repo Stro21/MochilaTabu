@@ -74,7 +74,7 @@ void Mochila::llenar_soluciones ()
 //          break;
 //        }
 //      }
-   }
+}
 
 
 Solucion Mochila::tabu_search()

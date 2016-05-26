@@ -52,3 +52,11 @@ void Objeto::setPeso(int peso) {
 int Objeto::getPeso() const {
     return peso;
 }
+
+int Objeto::PesoTotal() const {
+    return peso * cantidad;
+}
+
+int Objeto::ValorTotal() const {
+    return valor * cantidad;
+}

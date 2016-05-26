@@ -24,6 +24,8 @@ public:
     int getValor() const;
     void setPeso(int peso);
     int getPeso() const;
+    int PesoTotal() const;
+    int ValorTotal() const;
 };
 
 #endif

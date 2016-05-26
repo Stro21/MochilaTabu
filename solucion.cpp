@@ -11,8 +11,8 @@ Solucion::Solucion(int c, vector<Objeto> obj)
     cant_tipo_obj = c;
     for(int i = 0; i < c; i++){
       objetos.push_back(obj[i]);
-      peso = peso + obj[i].getPeso();
-      valor = valor + obj[i].getValor();
+      peso = peso + obj[i].PesoTotal();
+      valor = valor + obj[i].ValorTotal();
     }
     peso_total = peso;
     valor_total = valor;
