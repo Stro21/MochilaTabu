@@ -6,7 +6,6 @@
       <in>mochila.cpp</in>
       <in>objeto.cpp</in>
       <in>solucion.cpp</in>
-      <in>soluciones.cpp</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -49,8 +48,6 @@
       <item path="objeto.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="solucion.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="soluciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

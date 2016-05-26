@@ -1,79 +1,65 @@
 #include "solucion.h"
-#include <string>
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-Solucion::Solucion(int p, int v, int c, vector<Objeto> obj, Mochila k)
+Solucion::Solucion(int c, vector<Objeto> obj)
 {
-  peso_total = p;
-  valor_total = v;
-  cant_tipo_obj = c;
-  mochila = k;
-  objetos.reserve(c);
-  for(int i = 0; i < c; i++){
-    objetos[i] = obj[i];
-  }
-}
-
-Solucion::Solucion(){
-
-}
-
-int Solucion::get_peso_total()
-{
-  return peso_total;
-}
-
-void Solucion::set_peso_total(int p)
-{
-  peso_total = p;
-}
-
-int Solucion::get_valor_total()
-{
-  return valor_total;
-}
-
-void Solucion::set_valor_total(int v)
-{
-  valor_total = v;
-}
-
-int Solucion::get_cant_tipo_obj()
-{
-  return cant_tipo_obj;
-}
-
-void Solucion::set_cantidad_de_obj(int i, int c)
-{
-  objetos[i].set_cantidad(c);
+    int peso = 0; 
+    int valor = 0;
+    cant_tipo_obj = c;
+    for(int i = 0; i < c; i++){
+      objetos.push_back(obj[i]);
+      peso = peso + obj[i].getPeso();
+      valor = valor + obj[i].getValor();
+    }
+    peso_total = peso;
+    valor_total = valor;
 }
 
 void Solucion::print_solucion() {
-  cout << "El peso de la solucion tabu es de " << peso_total << endl;
-  cout << "El valor de la solucion tabu es de " << valor_total << endl;
-  cout << "Peso maximo de la mochila es de " << peso_max() << endl;
-  for (int i = 0; i < cant_tipo_obj; i++) {
-    objetos[i].print_objeto();
-  }
+    cout << "El peso de la solucion tabu es de " << peso_total << endl;
+    cout << "El valor de la solucion tabu es de " << valor_total << endl;
+    for (int i = 0; i < cant_tipo_obj; i++) {
+      objetos[i].print_objeto();
+    }
 }
 
-int Solucion::peso_max(){
-  return mochila.get_peso_max();
-}
 
 void Solucion::incre_cantidad_obj(int i) {
-  objetos[i].inc_cantidad();
+    objetos[i].inc_cantidad();
 }
 
-Solucion::Solucion(vector<Objeto> obj, Mochila m, int cant_ti)
-{
-  peso_total = 0;
-  valor_total = 0;
-  cant_tipo_obj = cant_ti;
-  objetos.reserve(cant_ti);
-  objetos = obj;
-  mochila = m;
+void Solucion::setObjetos(std::vector<Objeto> objetos) {
+    this->objetos = objetos;
 }
+
+std::vector<Objeto> Solucion::getObjetos() const {
+    return objetos;
+}
+
+void Solucion::setCant_tipo_obj(int cant_tipo_obj) {
+    this->cant_tipo_obj = cant_tipo_obj;
+}
+
+int Solucion::getCant_tipo_obj() const {
+    return cant_tipo_obj;
+}
+
+void Solucion::setValor_total(int valor_total) {
+    this->valor_total = valor_total;
+}
+
+int Solucion::getValor_total() const {
+    return valor_total;
+}
+
+void Solucion::setPeso_total(int peso_total) {
+    this->peso_total = peso_total;
+}
+
+int Solucion::getPeso_total() const {
+    return peso_total;
+}
+

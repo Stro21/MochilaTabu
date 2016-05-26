@@ -9,8 +9,6 @@
       <in>objeto.h</in>
       <in>solucion.cpp</in>
       <in>solucion.h</in>
-      <in>soluciones.cpp</in>
-      <in>soluciones.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

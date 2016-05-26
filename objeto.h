@@ -1,27 +1,29 @@
 #ifndef OBJETO_H
 #define OBJETO_H
 
-#include <string>
-
-using namespace std;
-
 class Objeto
 {
 private:
-  int peso;
-  int valor;
-  int cantidad;
-  string nombre;
+    int peso;
+    int valor;
+    int cantidad;
+    int id;
 public:
-  Objeto (int p, int v, int c, string nombre);
-  int get_peso();
-  int get_valor();
-  int get_cantidad();
-  void set_cantidad(int c);
-  void print_objeto();
-  void print_data();
-  Objeto();
-  void inc_cantidad();
+    Objeto(int peso, int valor, int cantidad, int id) :
+    peso(peso), valor(valor), cantidad(cantidad), id(id) {
+    }
+    void print_objeto();
+    void print_data();
+    Objeto(){}
+    void inc_cantidad();
+    void setId(int id);
+    int getId() const;
+    void setCantidad(int cantidad);
+    int getCantidad() const;
+    void setValor(int valor);
+    int getValor() const;
+    void setPeso(int peso);
+    int getPeso() const;
 };
 
 #endif
