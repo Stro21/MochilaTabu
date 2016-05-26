@@ -20,6 +20,7 @@ int main(int argc, char* argv[])
     tabu = universo;
     tabu[0].setCantidad(0);
     Solucion sol_tabu(4, tabu);
-    sol_tabu.print_solucion();
+    Mochila knapsack(7, 12, sol_tabu, 4, universo);
+    cout << knapsack.GetPeso_max() << endl;
     return 0;
 }
