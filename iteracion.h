@@ -24,6 +24,7 @@ public:
     void setPeso_total(int peso_total);
     int getPeso_total() const;
     std::vector<Objeto> swap_cant_obj(int cantidad, int indice, std::vector<Objeto> obj);
+    void print_sol_resu();
 };
 
 #endif

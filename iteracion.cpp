@@ -66,7 +66,13 @@ vector<Objeto> Iteracion::swap_cant_obj(int cantidad, int indice, vector<Objeto>
     for(int i = 0; i < cantidad; i++){
         cambiado.push_back(obj[i]);
     }
-    cambiado[indice].setCantidad(c1);
     cambiado[indice].setCantidad(c2);
+    cambiado[indice + 1].setCantidad(c1);
     return cambiado;
+}
+
+void Iteracion::print_sol_resu()
+{
+    cout << "El peso de la solucion tabu es de " << peso_total << endl;
+    cout << "El valor de la solucion tabu es de " << valor_total << endl;
 }

@@ -5,39 +5,19 @@
 
 using namespace std;
 
-Mochila::Mochila(int cant, int pm, Iteracion tabu, int tipo, std::vector<Objeto> obj)
+Mochila::Mochila(int pm, Iteracion tabu)
 {
     peso_max = pm;
-    cant_iteraciones = cant;
     soluciones.push_back(tabu);
-    tipos_obj = tipo;
-    for(int i = 0; i < tipo; i++){
-        universo_obj.push_back(obj[i]);
-    }
+    cantidad_tipo_objeto = tabu.getCant_tipo_obj();
 }
 
-void Mochila::SetCant_iteraciones(int cant_soluciones) {
-    this->cant_iteraciones = cant_soluciones;
+void Mochila::SetCantTipos_obj(int tipos_obj) {
+    this->cantidad_tipo_objeto = tipos_obj;
 }
 
-int Mochila::GetCant_iteraciones() const {
-    return cant_iteraciones;
-}
-
-void Mochila::SetUniverso_obj(std::vector<Objeto> universo_obj) {
-    this->universo_obj = universo_obj;
-}
-
-std::vector<Objeto> Mochila::GetUniverso_obj() const {
-    return universo_obj;
-}
-
-void Mochila::SetTipos_obj(int tipos_obj) {
-    this->tipos_obj = tipos_obj;
-}
-
-int Mochila::GetTipos_obj() const {
-    return tipos_obj;
+int Mochila::GetCantTipos_obj() const {
+    return cantidad_tipo_objeto;
 }
 
 void Mochila::SetSoluciones(std::vector<Iteracion> soluciones) {
@@ -58,8 +38,8 @@ int Mochila::GetPeso_max() const {
 
 void Mochila::llenar_soluciones ()
 {
-    for(int i = 0; i < tipos_obj; i++){
-        if(i == tipos_obj - 1){
+    for(int i = 0; i < cantidad_tipo_objeto; i++){
+        if(i == cantidad_tipo_objeto - 1){
             break;
         }
         soluciones.push_back(this->Swap(soluciones[i], i));

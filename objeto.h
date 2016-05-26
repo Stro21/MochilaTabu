@@ -12,6 +12,9 @@ public:
     Objeto(int peso, int valor, int cantidad, int id) :
     peso(peso), valor(valor), cantidad(cantidad), id(id) {
     }
+    Objeto(int peso, int valor, int cantidad) :
+    peso(peso), valor(valor), cantidad(cantidad) {
+    }
     void print_objeto();
     void print_data();
     Objeto(){}
