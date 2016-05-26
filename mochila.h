@@ -28,6 +28,7 @@ public:
     void SetCant_soluciones(int cant_soluciones);
     int GetCant_soluciones() const;
     bool menor_que_mochila(int peso);
+    std::vector<Objeto> Swap(std::vector<Objeto> obj);    
 };
 
 #endif

@@ -9,8 +9,7 @@ Mochila::Mochila(int cant, int pm, Solucion tabu, int tipo, std::vector<Objeto> 
 {
     peso_max = pm;
     cant_soluciones = cant;
-    soluciones.reserve(cant);
-    soluciones.insert(soluciones.begin(), tabu);
+    soluciones.push_back(tabu);
     tipos_obj = tipo;
     for(int i = 0; i < tipo; i++){
         universo_obj.push_back(obj[i]);
@@ -100,4 +99,9 @@ void Mochila::print_soluciones()
 bool Mochila::menor_que_mochila(int peso)
 {
     return peso_max <= peso;
+}
+
+vector<Objeto> Mochila::Swap(std::vector<Objeto> obj)
+{
+    
 }
