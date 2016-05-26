@@ -15,9 +15,11 @@ int main(int argc, char* argv[])
     universo.push_back(obj2);
     universo.push_back(obj3);
     universo.push_back(obj4);
-    for(int i = 0; i < 4; i++){
-        universo[i].print_data();
-        cout << endl;
-    }
+    vector<Objeto> tabu;
+    tabu.reserve(4);
+    tabu = universo;
+    tabu[0].setCantidad(0);
+    Solucion sol_tabu(4, tabu);
+    sol_tabu.print_solucion();
     return 0;
 }

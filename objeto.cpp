@@ -16,11 +16,6 @@ void Objeto::print_data()
   cout << "Cantidad: " << cantidad << endl;
 }
 
-void Objeto::inc_cantidad()
-{
-  cantidad = cantidad + 1;
-}
-
 void Objeto::setId(int id) {
     this->id = id;
 }

@@ -15,7 +15,6 @@ public:
     Solucion(int c, std::vector<Objeto> obj);
     void print_solucion();
     Solucion(){}
-    void incre_cantidad_obj(int i);
     void setObjetos(std::vector<Objeto> objetos);
     std::vector<Objeto> getObjetos() const;
     void setCant_tipo_obj(int cant_tipo_obj);

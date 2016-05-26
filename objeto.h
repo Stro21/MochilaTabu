@@ -15,7 +15,6 @@ public:
     void print_objeto();
     void print_data();
     Objeto(){}
-    void inc_cantidad();
     void setId(int id);
     int getId() const;
     void setCantidad(int cantidad);

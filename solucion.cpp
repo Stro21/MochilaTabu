@@ -26,11 +26,6 @@ void Solucion::print_solucion() {
     }
 }
 
-
-void Solucion::incre_cantidad_obj(int i) {
-    objetos[i].inc_cantidad();
-}
-
 void Solucion::setObjetos(std::vector<Objeto> objetos) {
     this->objetos = objetos;
 }
