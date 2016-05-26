@@ -58,3 +58,15 @@ int Iteracion::getPeso_total() const {
     return peso_total;
 }
 
+vector<Objeto> Iteracion::swap_cant_obj(int cantidad, int indice, vector<Objeto> obj)
+{
+    int c1 = obj[indice].getCantidad();
+    int c2 = obj[indice + 1].getCantidad();
+    vector<Objeto> cambiado;
+    for(int i = 0; i < cantidad; i++){
+        cambiado.push_back(obj[i]);
+    }
+    cambiado[indice].setCantidad(c1);
+    cambiado[indice].setCantidad(c2);
+    return cambiado;
+}

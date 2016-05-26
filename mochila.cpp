@@ -8,7 +8,7 @@ using namespace std;
 Mochila::Mochila(int cant, int pm, Iteracion tabu, int tipo, std::vector<Objeto> obj)
 {
     peso_max = pm;
-    cant_soluciones = cant;
+    cant_iteraciones = cant;
     soluciones.push_back(tabu);
     tipos_obj = tipo;
     for(int i = 0; i < tipo; i++){
@@ -16,12 +16,12 @@ Mochila::Mochila(int cant, int pm, Iteracion tabu, int tipo, std::vector<Objeto>
     }
 }
 
-void Mochila::SetCant_soluciones(int cant_soluciones) {
-    this->cant_soluciones = cant_soluciones;
+void Mochila::SetCant_iteraciones(int cant_soluciones) {
+    this->cant_iteraciones = cant_soluciones;
 }
 
-int Mochila::GetCant_soluciones() const {
-    return cant_soluciones;
+int Mochila::GetCant_iteraciones() const {
+    return cant_iteraciones;
 }
 
 void Mochila::SetUniverso_obj(std::vector<Objeto> universo_obj) {
@@ -58,28 +58,18 @@ int Mochila::GetPeso_max() const {
 
 void Mochila::llenar_soluciones ()
 {
-//    int peso = 0;
-//    int random = 0;
-//    for (int i = 1; i < cant_soluciones; i++){
-//      while (peso < mochila.get_peso_max()) {
-//        random = rand() % tipos_obj;
-//        if(peso + lista_obj[random].get_peso() <= mochila.get_peso_max()){
-//          peso = peso + lista_obj[random].get_peso();
-//          soluciones[i].set_peso_total(peso);
-//          soluciones[i].set_valor_total(soluciones[i].get_valor_total() + lista_obj[random].get_valor());
-//          soluciones[i].incre_cantidad_obj(random);
-//        }
-//        else{
-//          break;
-//        }
-//      }
+    for(int i = 0; i < tipos_obj; i++){
+        if(i == tipos_obj - 1){
+            break;
+        }
+        soluciones.push_back(this->Swap(soluciones[i], i));
+    }
 }
-
 
 Iteracion Mochila::tabu_search()
 {
     Iteracion tabu = soluciones[0];
-    for(int i = 1; i < cant_soluciones; i++){
+    for(int i = 1; i < soluciones.size(); i++){
         if(tabu.getValor_total() < soluciones[i].getValor_total()
             && this->menor_que_mochila(soluciones[i].getPeso_total())){
             tabu = soluciones[i];
@@ -90,7 +80,7 @@ Iteracion Mochila::tabu_search()
 
 void Mochila::print_soluciones()
 {
-    for(int i = 0; i < cant_soluciones; i++){
+    for(int i = 0; i < soluciones.size(); i++){
       soluciones[i].print_solucion();
       cout << endl;
     }
@@ -101,7 +91,9 @@ bool Mochila::menor_que_mochila(int peso)
     return peso_max <= peso;
 }
 
-vector<Objeto> Mochila::Swap(std::vector<Objeto> obj)
+Iteracion Mochila::Swap(Iteracion iter, int num_ite)
 {
-    
+    int c = iter.getCant_tipo_obj();
+    Iteracion iteracion(c, iter.swap_cant_obj(c, num_ite, iter.getObjetos()));
+    return iteracion;
 }

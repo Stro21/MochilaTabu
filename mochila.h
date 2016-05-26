@@ -8,7 +8,7 @@ class Mochila
 {
 private:
     int peso_max;
-    int cant_soluciones;
+    int cant_iteraciones;
     std::vector<Iteracion> soluciones;
     int tipos_obj;
     std::vector<Objeto> universo_obj;
@@ -25,10 +25,10 @@ public:
     void llenar_soluciones();
     Iteracion tabu_search();
     void print_soluciones();
-    void SetCant_soluciones(int cant_soluciones);
-    int GetCant_soluciones() const;
+    void SetCant_iteraciones(int cant_soluciones);
+    int GetCant_iteraciones() const;
     bool menor_que_mochila(int peso);
-    std::vector<Objeto> Swap(std::vector<Objeto> obj);    
+    Iteracion Swap(Iteracion iter, int num_ite);    
 };
 
 #endif
