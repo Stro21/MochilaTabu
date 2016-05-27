@@ -8,9 +8,7 @@ private:
     int valor;
     bool esta;
 public:
-    Objeto(int peso, int valor) :
-    peso(peso), valor(valor) {
-    }
+    Objeto(int peso, int valor);
     Objeto(){}
     Objeto(int peso, int valor, bool esta) :
     peso(peso), valor(valor), esta(esta) {

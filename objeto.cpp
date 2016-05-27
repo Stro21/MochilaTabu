@@ -1,5 +1,6 @@
 #include "objeto.h"
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -40,5 +41,17 @@ void Objeto::print_esta()
     }
     else{
         cout << 0 << endl;
+    }
+}
+
+Objeto::Objeto(int peso, int valor)
+{
+    this->peso = peso;
+    this->valor = valor;
+    if((rand() % 2) == 1){
+        this->esta = true;
+    }
+    else{
+        this->esta = false;
     }
 }
