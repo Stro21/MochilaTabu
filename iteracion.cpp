@@ -10,9 +10,11 @@ Iteracion::Iteracion(int c, vector<Objeto> obj)
     int valor = 0;
     cant_tipo_obj = c;
     for(int i = 0; i < c; i++){
-      objetos.push_back(obj[i]);
-      peso = peso + obj[i].PesoTotal();
-      valor = valor + obj[i].ValorTotal();
+        objetos.push_back(obj[i]);
+        if(obj[i].isEsta()){
+            peso = peso + obj[i].getPeso();
+            valor = valor + obj[i].getValor();
+        }
     }
     peso_total = peso;
     valor_total = valor;
@@ -22,7 +24,7 @@ void Iteracion::print_solucion() {
     cout << "El peso de la solucion tabu es de " << peso_total << endl;
     cout << "El valor de la solucion tabu es de " << valor_total << endl;
     for (int i = 0; i < cant_tipo_obj; i++) {
-      objetos[i].print_objeto();
+      objetos[i].print_esta();
     }
 }
 
@@ -60,19 +62,13 @@ int Iteracion::getPeso_total() const {
 
 vector<Objeto> Iteracion::swap_cant_obj(int cantidad, int indice, vector<Objeto> obj)
 {
-    int c1 = obj[indice].getCantidad();
-    int c2 = obj[indice + 1].getCantidad();
+    bool esta1 = obj[indice].isEsta();
+    bool esta2 = obj[indice + 1].isEsta();
     vector<Objeto> cambiado;
     for(int i = 0; i < cantidad; i++){
         cambiado.push_back(obj[i]);
     }
-    cambiado[indice].setCantidad(c2);
-    cambiado[indice + 1].setCantidad(c1);
+    cambiado[indice].setEsta(esta2);
+    cambiado[indice + 1].setEsta(esta1);
     return cambiado;
-}
-
-void Iteracion::print_sol_resu()
-{
-    cout << "El peso de la solucion tabu es de " << peso_total << endl;
-    cout << "El valor de la solucion tabu es de " << valor_total << endl;
 }

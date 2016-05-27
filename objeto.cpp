@@ -3,35 +3,6 @@
 
 using namespace std;
 
-void Objeto::print_objeto()
-{
-  cout << "Tiene " << cantidad << " de objetos de id " << id << endl;
-}
-
-void Objeto::print_data()
-{
-  cout << "ID: " << id << endl;
-  cout << "Peso: " << peso << endl;
-  cout << "Valor: " << valor << endl;
-  cout << "Cantidad: " << cantidad << endl;
-}
-
-void Objeto::setId(int id) {
-    this->id = id;
-}
-
-int Objeto::getId() const {
-    return id;
-}
-
-void Objeto::setCantidad(int cantidad) {
-    this->cantidad = cantidad;
-}
-
-int Objeto::getCantidad() const {
-    return cantidad;
-}
-
 void Objeto::setValor(int valor) {
     this->valor = valor;
 }
@@ -48,10 +19,26 @@ int Objeto::getPeso() const {
     return peso;
 }
 
-int Objeto::PesoTotal() const {
-    return peso * cantidad;
+void Objeto::setEsta(bool esta) {
+    this->esta = esta;
 }
 
-int Objeto::ValorTotal() const {
-    return valor * cantidad;
+bool Objeto::isEsta() const {
+    return esta;
+}
+
+void Objeto::print_data()
+{
+    cout << "Peso: " << peso << endl;
+    cout << "Valor: " << valor << endl;
+}
+
+void Objeto::print_esta()
+{
+    if(esta){
+        cout << 1 << endl;
+    }
+    else{
+        cout << 0 << endl;
+    }
 }

@@ -6,28 +6,23 @@ class Objeto
 private:
     int peso;
     int valor;
-    int cantidad;
-    int id;
+    bool esta;
 public:
-    Objeto(int peso, int valor, int cantidad, int id) :
-    peso(peso), valor(valor), cantidad(cantidad), id(id) {
+    Objeto(int peso, int valor) :
+    peso(peso), valor(valor) {
     }
-    Objeto(int peso, int valor, int cantidad) :
-    peso(peso), valor(valor), cantidad(cantidad) {
-    }
-    void print_objeto();
-    void print_data();
     Objeto(){}
-    void setId(int id);
-    int getId() const;
-    void setCantidad(int cantidad);
-    int getCantidad() const;
+    Objeto(int peso, int valor, bool esta) :
+    peso(peso), valor(valor), esta(esta) {
+    }
     void setValor(int valor);
     int getValor() const;
     void setPeso(int peso);
     int getPeso() const;
-    int PesoTotal() const;
-    int ValorTotal() const;
+    void setEsta(bool esta);
+    bool isEsta() const;
+    void print_data();
+    void print_esta();
 };
 
 #endif
