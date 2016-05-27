@@ -49,7 +49,8 @@ void Mochila::llenar_soluciones ()
 Iteracion Mochila::tabu_search()
 {
     Iteracion tabu = soluciones[0];
-    for(int i = 1; i < soluciones.size(); i++){
+    int itera = soluciones.size();
+    for(int i = 1; i < itera; i++){
         if(tabu.getValor_total() < soluciones[i].getValor_total()
             && menor_que_mochila(soluciones[i].getPeso_total())){
             tabu = soluciones[i];
@@ -60,7 +61,8 @@ Iteracion Mochila::tabu_search()
 
 void Mochila::print_soluciones()
 {
-    for(int i = 0; i < soluciones.size(); i++){
+    int itera = soluciones.size();
+    for(int i = 0; i < itera; i++){
         cout << "Iteracion " << i+1 << endl;
         soluciones[i].print_solucion();
         cout << endl;
@@ -75,6 +77,6 @@ bool Mochila::menor_que_mochila(int peso)
 Iteracion Mochila::Swap(Iteracion iter, int num_ite)
 {
     int c = iter.getCant_tipo_obj();
-    Iteracion iteracion(c, iter.swap_cant_obj(c, num_ite, iter.getObjetos()));
+    Iteracion iteracion(iter.swap_cant_obj(c, num_ite, iter.getObjetos()), this->peso_max);
     return iteracion;
 }

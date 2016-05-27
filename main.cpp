@@ -54,21 +54,7 @@ int main(int argc, char* argv[])
     for(int i = 0; i < cantidad_objetos; i++){
         tabu.push_back(Objeto(peso[i], valor[i]));
     }
-//    int peso, valor;
-//    bool esta;
-//    for(int i = 0; i < 2000; i++){
-//        peso = rand() % 8 + 1;
-//        valor = rand() % 8 + 1;
-//        if((rand() % 2) == 1){
-//            esta = true;
-//        }
-//        else{
-//            esta = false;
-//        }
-//        tabu.push_back(Objeto(peso, valor, esta));
-//    }
-    
-    Iteracion sol_tabu(tabu.size(), tabu);
+    Iteracion sol_tabu(tabu, peso_mochila);
     Mochila knapsack(peso_mochila, sol_tabu);
     knapsack.llenar_soluciones();
     sol_tabu = knapsack.tabu_search();

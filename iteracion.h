@@ -12,7 +12,7 @@ private:
     int cant_tipo_obj;
     std::vector<Objeto> objetos;
 public:
-    Iteracion(int c, std::vector<Objeto> obj);
+    Iteracion(std::vector<Objeto> obj, int peso_max);
     void print_solucion();
     Iteracion(){}
     void setObjetos(std::vector<Objeto> objetos);
@@ -24,6 +24,7 @@ public:
     void setPeso_total(int peso_total);
     int getPeso_total() const;
     std::vector<Objeto> swap_cant_obj(int cantidad, int indice, std::vector<Objeto> obj);
+    std::vector<Objeto> asignar_esta(std::vector<Objeto> obj, int peso_max);
 };
 
 #endif

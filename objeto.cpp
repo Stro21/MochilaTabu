@@ -48,10 +48,4 @@ Objeto::Objeto(int peso, int valor)
 {
     this->peso = peso;
     this->valor = valor;
-    if((rand() % 2) == 1){
-        this->esta = true;
-    }
-    else{
-        this->esta = false;
-    }
 }

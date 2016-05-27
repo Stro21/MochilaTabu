@@ -4,12 +4,14 @@
 
 using namespace std;
 
-Iteracion::Iteracion(int c, vector<Objeto> obj)
+Iteracion::Iteracion(vector<Objeto> obj, int peso_max)
 {
     int peso = 0; 
     int valor = 0;
-    cant_tipo_obj = c;
-    for(int i = 0; i < c; i++){
+    cant_tipo_obj = obj.size();
+    obj = asignar_esta(obj, peso_max);
+    int loop = obj.size();
+    for(int i = 0; i < loop; i++){
         objetos.push_back(obj[i]);
         if(obj[i].isEsta()){
             peso = peso + obj[i].getPeso();
@@ -71,4 +73,19 @@ vector<Objeto> Iteracion::swap_cant_obj(int cantidad, int indice, vector<Objeto>
     cambiado[indice].setEsta(esta2);
     cambiado[indice + 1].setEsta(esta1);
     return cambiado;
+}
+
+vector<Objeto> Iteracion::asignar_esta(vector<Objeto> obj, int peso_max)
+{
+    int p = 0;
+    int loop = obj.size();
+    for(int i = 0; p < loop; i++){
+        if(p + obj[i].getPeso() <= peso_max){
+            obj[i].setEsta(true);
+        }
+        else{
+            obj[i].setEsta(false);
+        }
+    }
+    return obj;
 }
