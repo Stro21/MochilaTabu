@@ -64,7 +64,7 @@ void Mochila::print_soluciones()
     int itera = soluciones.size();
     for(int i = 0; i < itera; i++){
         cout << "Iteracion " << i+1 << endl;
-        soluciones[i].print_solucion();
+        soluciones[i].print_sol_resu();
         cout << endl;
     }
 }

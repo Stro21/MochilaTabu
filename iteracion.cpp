@@ -22,11 +22,12 @@ Iteracion::Iteracion(vector<Objeto> obj, int peso_max)
     valor_total = valor;
 }
 
-void Iteracion::print_solucion() {
+void Iteracion::print_solucion(int peso_max) {
     cout << "El peso de la solucion tabu es de " << peso_total << endl;
     cout << "El valor de la solucion tabu es de " << valor_total << endl;
+    cout << "El peso maximo de la mochila es de " << peso_max << endl;
     for (int i = 0; i < cant_tipo_obj; i++) {
-      objetos[i].print_esta();
+        objetos[i].print_esta();
     }
 }
 
@@ -89,4 +90,11 @@ vector<Objeto> Iteracion::asignar_esta(vector<Objeto> obj, int peso_max)
         }
     }
     return obj;
+}
+
+void Iteracion::print_sol_resu()
+{
+    for (int i = 0; i < cant_tipo_obj; i++) {
+        objetos[i].print_esta();
+    }
 }
