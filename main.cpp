@@ -16,6 +16,7 @@ int main(int argc, char* argv[])
     ifstream peso_max("p01_c.txt");
     ifstream peso_objetos("p01_w.txt");
     ifstream valor_objetos("p01_p.txt");
+    cout << "paso por aqui parte 1" << endl;
     if(peso_max.is_open()){
         while(getline(peso_max, line)){
             peso_mochila = atoi(line.c_str());
@@ -54,7 +55,9 @@ int main(int argc, char* argv[])
     for(int i = 0; i < cantidad_objetos; i++){
         tabu.push_back(Objeto(peso[i], valor[i]));
     }
+    cout << "paso por aqui parte 2" << endl;
     Iteracion sol_tabu(tabu, peso_mochila);
+    cout << "paso por aqui parte 3" << endl;
     Mochila knapsack(peso_mochila, sol_tabu);
     knapsack.llenar_soluciones();
     sol_tabu = knapsack.tabu_search();

@@ -79,9 +79,10 @@ vector<Objeto> Iteracion::asignar_esta(vector<Objeto> obj, int peso_max)
 {
     int p = 0;
     int loop = obj.size();
-    for(int i = 0; p < loop; i++){
+    for(int i = 0; i < loop; i++){
         if(p + obj[i].getPeso() <= peso_max){
             obj[i].setEsta(true);
+            p = p + obj[i].getPeso();
         }
         else{
             obj[i].setEsta(false);
