@@ -4,39 +4,44 @@
 #include <stdlib.h>
 #include <fstream>
 #include <string>
+#include <ctime>
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
+    clock_t t_ini, t_fin;
+    t_ini = clock();
+    double segundos;
     string line;
     int peso_mochila, cantidad_objetos;
     vector<int> peso, valor;
     vector<Objeto> tabu;
-//    ifstream peso_max("test/p01_c.txt");
-//    ifstream peso_objetos("test/p01_w.txt");
-//    ifstream valor_objetos("test/p01_p.txt");
-//    ifstream peso_max("test/p02_c.txt");
-//    ifstream peso_objetos("test/p02_w.txt");
-//    ifstream valor_objetos("test/p02_p.txt");
-//    ifstream peso_max("test/p03_c.txt");
-//    ifstream peso_objetos("test/p03_w.txt");
-//    ifstream valor_objetos("test/p03_p.txt");
-//    ifstream peso_max("test/p04_c.txt");
-//    ifstream peso_objetos("test/p04_w.txt");
-//    ifstream valor_objetos("test/p04_p.txt");
-//    ifstream peso_max("test/p05_c.txt");
-//    ifstream peso_objetos("test/p05_w.txt");
-//    ifstream valor_objetos("test/p05_p.txt");
-//    ifstream peso_max("test/p06_c.txt");
-//    ifstream peso_objetos("test/p06_w.txt");
-//    ifstream valor_objetos("test/p06_p.txt");
-//    ifstream peso_max("test/p07_c.txt");
-//    ifstream peso_objetos("test/p07_w.txt");
-//    ifstream valor_objetos("test/p07_p.txt");
-    ifstream peso_max("test/p08_c.txt");
-    ifstream peso_objetos("test/p08_w.txt");
-    ifstream valor_objetos("test/p08_p.txt");
+//    ifstream peso_max("test/Test1/p01_c.txt");
+//    ifstream peso_objetos("test/Test1/p01_w.txt");
+//    ifstream valor_objetos("test/Test1/p01_p.txt");
+//    ifstream peso_max("test/Test2/p02_c.txt");
+//    ifstream peso_objetos("test/Test2/p02_w.txt");
+//    ifstream valor_objetos("test/Test2/p02_p.txt");
+//    ifstream peso_max("test/Test3/p03_c.txt");
+//    ifstream peso_objetos("test/Test3/p03_w.txt");
+//    ifstream valor_objetos("test/Test3/p03_p.txt");
+//    ifstream peso_max("test/Test4/p04_c.txt");
+//    ifstream peso_objetos("test/Test4/p04_w.txt");
+//    ifstream valor_objetos("test/Test4/p04_p.txt");
+//    ifstream peso_max("test/Test5/p05_c.txt");
+//    ifstream peso_objetos("test/Test5/p05_w.txt");
+//    ifstream valor_objetos("test/Test5/p05_p.txt");
+//    ifstream peso_max("test/Test6/p06_c.txt");
+//    ifstream peso_objetos("test/Test6/p06_w.txt");
+//    ifstream valor_objetos("test/Test6/p06_p.txt");
+//    ifstream peso_max("test/Test7/p07_c.txt");
+//    ifstream peso_objetos("test/Test7/p07_w.txt");
+//    ifstream valor_objetos("test/Test7/p07_p.txt");
+    ifstream peso_max("test/Test8/p08_c.txt");
+    ifstream peso_objetos("test/Test8/p08_w.txt");
+    ifstream valor_objetos("test/Test8/p08_p.txt");
+    ofstream resultado("test/Test8/p08_r");
     if(peso_max.is_open()){
         while(getline(peso_max, line)){
             peso_mochila = atoi(line.c_str());
@@ -81,5 +86,8 @@ int main(int argc, char* argv[])
     sol_tabu = knapsack.tabu_search();
     cout << "La solución optima es:" << endl;
     sol_tabu.print_solucion(peso_mochila);
+    t_fin = clock();
+    segundos = (double) (t_fin - t_ini) / CLOCKS_PER_SEC;
+    cout << "Tiempo total de procesamiento: " << segundos << " segundos." << endl << endl;
     return 0;
 }

@@ -3,6 +3,22 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
       <df name="test">
+        <df name="Test1">
+        </df>
+        <df name="Test2">
+        </df>
+        <df name="Test3">
+        </df>
+        <df name="Test4">
+        </df>
+        <df name="Test5">
+        </df>
+        <df name="Test6">
+        </df>
+        <df name="Test7">
+        </df>
+        <df name="Test8">
+        </df>
       </df>
       <in>iteracion.cpp</in>
       <in>iteracion.h</in>
