@@ -1,6 +1,7 @@
 #include "objeto.h"
 #include <iostream>
 #include <stdlib.h>
+#include <fstream>
 
 using namespace std;
 
@@ -34,13 +35,13 @@ void Objeto::print_data()
     cout << "Valor: " << valor << endl;
 }
 
-void Objeto::print_esta()
+void Objeto::print_esta(ofstream& salida)
 {
     if(esta){
-        cout << 1 << endl;
+        salida << 1;
     }
     else{
-        cout << 0 << endl;
+        salida << 0;
     }
 }
 

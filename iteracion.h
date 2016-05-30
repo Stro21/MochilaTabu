@@ -3,6 +3,7 @@
 
 #include "objeto.h"
 #include <vector>
+#include <fstream>
 
 class Iteracion
 {
@@ -13,7 +14,7 @@ private:
     std::vector<Objeto> objetos;
 public:
     Iteracion(std::vector<Objeto> obj, int peso_max);
-    void print_solucion(int peso_max);
+    void print_solucion(std::ofstream& salida);
     Iteracion(){}
     void setObjetos(std::vector<Objeto> objetos);
     std::vector<Objeto> getObjetos() const;
@@ -25,7 +26,7 @@ public:
     int getPeso_total() const;
     std::vector<Objeto> swap_cant_obj(int cantidad, int indice, std::vector<Objeto> obj);
     std::vector<Objeto> asignar_esta(std::vector<Objeto> obj, int peso_max);
-    void print_sol_resu();
+    void print_sol_resu(std::ofstream& salida);
 };
 
 #endif

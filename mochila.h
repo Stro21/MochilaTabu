@@ -3,6 +3,7 @@
 
 #include "iteracion.h"
 #include <vector>
+#include <fstream>
 
 class Mochila
 {
@@ -20,7 +21,7 @@ public:
     int GetPeso_max() const;
     void llenar_soluciones();
     Iteracion tabu_search();
-    void print_soluciones();
+    void print_soluciones(std::ofstream& salida);
     bool menor_que_mochila(int peso);
     Iteracion Swap(Iteracion iter, int num_ite);    
 };

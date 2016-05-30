@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -59,13 +60,13 @@ Iteracion Mochila::tabu_search()
     return tabu;
 }
 
-void Mochila::print_soluciones()
+void Mochila::print_soluciones(ofstream& salida)
 {
     int itera = soluciones.size();
     for(int i = 0; i < itera; i++){
-        cout << "Iteracion " << i+1 << endl;
-        soluciones[i].print_sol_resu();
-        cout << endl;
+        salida << "Iteracion " << i+1 << endl;
+        soluciones[i].print_solucion(salida);
+        salida << endl;
     }
 }
 

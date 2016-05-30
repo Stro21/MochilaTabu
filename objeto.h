@@ -1,6 +1,8 @@
 #ifndef OBJETO_H
 #define OBJETO_H
 
+#include <fstream>
+
 class Objeto
 {
 private:
@@ -20,7 +22,7 @@ public:
     void setEsta(bool esta);
     bool isEsta() const;
     void print_data();
-    void print_esta();
+    void print_esta(std::ofstream& salida);
 };
 
 #endif
