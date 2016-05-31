@@ -20,10 +20,11 @@ public:
     void SetPeso_max(int peso_max);
     int GetPeso_max() const;
     void llenar_soluciones();
-    Iteracion tabu_search();
+    int tabu_search();
     void print_soluciones(std::ofstream& salida);
     bool menor_que_mochila(int peso);
-    Iteracion Swap(Iteracion iter, int num_ite);    
+    Iteracion Swap(Iteracion iter, int num_ite);
+    void print_sol_optima(std::ofstream& salida);
 };
 
 #endif

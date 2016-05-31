@@ -23,6 +23,23 @@ Iteracion::Iteracion(vector<Objeto> obj, int peso_max)
     valor_total = valor;
 }
 
+Iteracion::Iteracion(std::vector<Objeto> obj)
+{
+    int peso = 0; 
+    int valor = 0;
+    cant_tipo_obj = obj.size();
+    int loop = obj.size();
+    for(int i = 0; i < loop; i++){
+        objetos.push_back(obj[i]);
+        if(obj[i].isEsta()){
+            peso = peso + obj[i].getPeso();
+            valor = valor + obj[i].getValor();
+        }
+    }
+    peso_total = peso;
+    valor_total = valor;
+}
+
 void Iteracion::print_solucion(ofstream& salida)
 {
     salida << "El peso de la solucion  es de " << peso_total << endl;
@@ -84,12 +101,20 @@ vector<Objeto> Iteracion::asignar_esta(vector<Objeto> obj, int peso_max)
     int p = 0;
     int loop = obj.size();
     for(int i = 0; i < loop; i++){
-        if(p + obj[i].getPeso() <= peso_max){
+        if(obj[i].objeto_factible() && p + obj[i].getPeso() <= peso_max){
             obj[i].setEsta(true);
             p = p + obj[i].getPeso();
         }
         else{
             obj[i].setEsta(false);
+        }
+    }
+    if(p < peso_max){
+        for(int j = 0; j < loop; j++){
+            if(!obj[j].isEsta() && p + obj[j].getPeso() <= peso_max){
+                obj[j].setEsta(true);
+                p = p + obj[j].getPeso();
+            }
         }
     }
     return obj;

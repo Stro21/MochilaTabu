@@ -50,3 +50,10 @@ Objeto::Objeto(int peso, int valor)
     this->peso = peso;
     this->valor = valor;
 }
+
+bool Objeto::objeto_factible()
+{
+    double weight = double(this->peso);
+    double value = double(this->valor);
+    return value/weight >= 1;
+}

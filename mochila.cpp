@@ -47,17 +47,28 @@ void Mochila::llenar_soluciones ()
     }
 }
 
-Iteracion Mochila::tabu_search()
+int Mochila::tabu_search()
 {
     Iteracion tabu = soluciones[0];
+    int sol_optima = 0;
     int itera = soluciones.size();
     for(int i = 1; i < itera; i++){
         if(tabu.getValor_total() < soluciones[i].getValor_total()
             && menor_que_mochila(soluciones[i].getPeso_total())){
             tabu = soluciones[i];
+            sol_optima = i;
         }
     }
-    return tabu;
+    return sol_optima;
+}
+
+void Mochila::print_sol_optima(ofstream& salida)
+{
+    int tabu = this->tabu_search();
+    salida << "La solución optima pertenece a la iteracion " << tabu;
+    salida << " y su resultado es:" << endl;
+    soluciones[tabu].print_solucion(salida);
+    salida << endl;
 }
 
 void Mochila::print_soluciones(ofstream& salida)
@@ -78,6 +89,6 @@ bool Mochila::menor_que_mochila(int peso)
 Iteracion Mochila::Swap(Iteracion iter, int num_ite)
 {
     int c = iter.getCant_tipo_obj();
-    Iteracion iteracion(iter.swap_cant_obj(c, num_ite, iter.getObjetos()), this->peso_max);
+    Iteracion iteracion(iter.swap_cant_obj(c, num_ite, iter.getObjetos()));
     return iteracion;
 }

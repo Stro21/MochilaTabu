@@ -23,6 +23,7 @@ public:
     bool isEsta() const;
     void print_data();
     void print_esta(std::ofstream& salida);
+    bool objeto_factible();
 };
 
 #endif

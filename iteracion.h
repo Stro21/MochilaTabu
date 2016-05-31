@@ -14,6 +14,7 @@ private:
     std::vector<Objeto> objetos;
 public:
     Iteracion(std::vector<Objeto> obj, int peso_max);
+    Iteracion(std::vector<Objeto> obj);
     void print_solucion(std::ofstream& salida);
     Iteracion(){}
     void setObjetos(std::vector<Objeto> objetos);
