@@ -59,14 +59,14 @@ int Mochila::tabu_search()
             sol_optima = i;
         }
     }
-    return sol_optima;
+    return sol_optima + 1;
 }
 
 void Mochila::print_sol_optima(ofstream& salida)
 {
     int tabu = this->tabu_search();
     salida << "La solución optima pertenece a la iteracion " << tabu;
-    salida << " y su resultado es:" << endl;
+    salida << " y sus datos son:" << endl;
     soluciones[tabu].print_solucion(salida);
     salida << endl;
 }

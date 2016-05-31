@@ -17,10 +17,10 @@ int main(int argc, char* argv[])
     int peso_mochila, cantidad_objetos;
     vector<int> peso, valor;
     vector<Objeto> tabu;
-//    ifstream peso_max("test/Test1/p01_c.txt");
-//    ifstream peso_objetos("test/Test1/p01_w.txt");
-//    ifstream valor_objetos("test/Test1/p01_p.txt");
-//    ofstream resultado("test/Test1/p01_resultados.txt");    
+    ifstream peso_max("test/Test1/p01_c.txt");
+    ifstream peso_objetos("test/Test1/p01_w.txt");
+    ifstream valor_objetos("test/Test1/p01_p.txt");
+    ofstream resultado("test/Test1/p01_resultados.txt");    
 //    ifstream peso_max("test/Test2/p02_c.txt");
 //    ifstream peso_objetos("test/Test2/p02_w.txt");
 //    ifstream valor_objetos("test/Test2/p02_p.txt");
@@ -45,10 +45,10 @@ int main(int argc, char* argv[])
 //    ifstream peso_objetos("test/Test7/p07_w.txt");
 //    ifstream valor_objetos("test/Test7/p07_p.txt");
 //    ofstream resultado("test/Test7/p07_resultados.txt");    
-    ifstream peso_max("test/Test8/p08_c.txt");
-    ifstream peso_objetos("test/Test8/p08_w.txt");
-    ifstream valor_objetos("test/Test8/p08_p.txt");
-    ofstream resultado("test/Test8/p08_resultados.txt");
+//    ifstream peso_max("test/Test8/p08_c.txt");
+//    ifstream peso_objetos("test/Test8/p08_w.txt");
+//    ifstream valor_objetos("test/Test8/p08_p.txt");
+//    ofstream resultado("test/Test8/p08_resultados.txt");
 //Lee el archivo del peso de la mochila y lo guarda en la variable peso_mochila.   
     if(peso_max.is_open()){
         while(getline(peso_max, line)){
