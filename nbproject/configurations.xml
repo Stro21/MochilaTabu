@@ -53,13 +53,13 @@
         </ccTool>
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="4">
+      </item>
+      <item path="mochila.cpp" ex="false" tool="1" flavor2="4">
         <ccTool flags="0">
           <incDir>
             <pElem>.</pElem>
           </incDir>
         </ccTool>
-      </item>
-      <item path="mochila.cpp" ex="false" tool="1" flavor2="4">
       </item>
       <item path="objeto.cpp" ex="false" tool="1" flavor2="4">
         <ccTool flags="0">
