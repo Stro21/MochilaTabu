@@ -20,6 +20,8 @@
         <df name="Test8">
         </df>
       </df>
+      <in>archivo.cpp</in>
+      <in>archivo.h</in>
       <in>iteracion.cpp</in>
       <in>iteracion.h</in>
       <in>main.cpp</in>
@@ -34,7 +36,7 @@
     <conf name="Default" type="0">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <platform>2</platform>
+        <platform>3</platform>
       </toolsSet>
       <compile>
         <compiledirpicklist>
