@@ -1,0 +1,127 @@
+El peso maximo que soporta la mochila es de 6404180.
+Iteracion 1
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 2
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 3
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 4
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 5
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 6
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 7
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 8
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 9
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 10
+El peso de la solucion  es de 6376286
+El valor de la solucion es de 12808431
+Solucion: 111111111101000000010000
+
+Iteracion 11
+El peso de la solucion  es de 6325992
+El valor de la solucion es de 12750427
+Solucion: 111111111011000000010000
+
+Iteracion 12
+El peso de la solucion  es de 6325992
+El valor de la solucion es de 12750427
+Solucion: 111111111011000000010000
+
+Iteracion 13
+El peso de la solucion  es de 6385018
+El valor de la solucion es de 12953974
+Solucion: 111111111010100000010000
+
+Iteracion 14
+El peso de la solucion  es de 6444864
+El valor de la solucion es de 13020974
+Solucion: 111111111010010000010000
+
+Iteracion 15
+El peso de la solucion  es de 6263122
+El valor de la solucion es de 12654415
+Solucion: 111111111010001000010000
+
+Iteracion 16
+El peso de la solucion  es de 6725273
+El valor de la solucion es de 13768676
+Solucion: 111111111010000100010000
+
+Iteracion 17
+El peso de la solucion  es de 6097208
+El valor de la solucion es de 12376505
+Solucion: 111111111010000010010000
+
+Iteracion 18
+El peso de la solucion  es de 6220460
+El valor de la solucion es de 12554793
+Solucion: 111111111010000001010000
+
+Iteracion 19
+El peso de la solucion  es de 6705323
+El valor de la solucion es de 13527165
+Solucion: 111111111010000000110000
+
+Iteracion 20
+El peso de la solucion  es de 6705323
+El valor de la solucion es de 13527165
+Solucion: 111111111010000000110000
+
+Iteracion 21
+El peso de la solucion  es de 7170889
+El valor de la solucion es de 14362923
+Solucion: 111111111010000000101000
+
+Iteracion 22
+El peso de la solucion  es de 6938662
+El valor de la solucion es de 14038677
+Solucion: 111111111010000000100100
+
+Iteracion 23
+El peso de la solucion  es de 6898854
+El valor de la solucion es de 13927691
+Solucion: 111111111010000000100010
+
+Iteracion 24
+El peso de la solucion  es de 6843622
+El valor de la solucion es de 13830695
+Solucion: 111111111010000000100001
+
+La solución optima pertenece a la iteracion 13 y sus datos son:
+El peso de la solucion  es de 6444864
+El valor de la solucion es de 13020974
+Solucion: 111111111010010000010000
+
+Tiempo total de procesamiento: 0 segundos.

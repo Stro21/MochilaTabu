@@ -1,0 +1,82 @@
+El peso maximo que soporta la mochila es de 750.
+Iteracion 1
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 2
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 3
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 4
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 5
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 6
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 7
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 8
+El peso de la solucion  es de 653
+El valor de la solucion es de 1249
+Solucion: 111111110000000
+
+Iteracion 9
+El peso de la solucion  es de 657
+El valor de la solucion es de 1257
+Solucion: 111111101000000
+
+Iteracion 10
+El peso de la solucion  es de 665
+El valor de la solucion es de 1266
+Solucion: 111111100100000
+
+Iteracion 11
+El peso de la solucion  es de 669
+El valor de la solucion es de 1275
+Solucion: 111111100010000
+
+Iteracion 12
+El peso de la solucion  es de 672
+El valor de la solucion es de 1279
+Solucion: 111111100001000
+
+Iteracion 13
+El peso de la solucion  es de 674
+El valor de la solucion es de 1286
+Solucion: 111111100000100
+
+Iteracion 14
+El peso de la solucion  es de 677
+El valor de la solucion es de 1294
+Solucion: 111111100000010
+
+Iteracion 15
+El peso de la solucion  es de 679
+El valor de la solucion es de 1305
+Solucion: 111111100000001
+
+La solución optima pertenece a la iteracion 15 y sus datos son:
+El peso de la solucion  es de 0
+El valor de la solucion es de 0
+Solucion: 
+
+Tiempo total de procesamiento: 0 segundos.

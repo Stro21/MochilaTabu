@@ -1,0 +1,47 @@
+El peso maximo que soporta la mochila es de 104.
+Iteracion 1
+El peso de la solucion  es de 97
+El valor de la solucion es de 858
+Solucion: 11011111
+
+Iteracion 2
+El peso de la solucion  es de 97
+El valor de la solucion es de 858
+Solucion: 11011111
+
+Iteracion 3
+El peso de la solucion  es de 107
+El valor de la solucion es de 908
+Solucion: 10111111
+
+Iteracion 4
+El peso de la solucion  es de 107
+El valor de la solucion es de 908
+Solucion: 10111111
+
+Iteracion 5
+El peso de la solucion  es de 107
+El valor de la solucion es de 908
+Solucion: 10111111
+
+Iteracion 6
+El peso de la solucion  es de 107
+El valor de la solucion es de 908
+Solucion: 10111111
+
+Iteracion 7
+El peso de la solucion  es de 107
+El valor de la solucion es de 908
+Solucion: 10111111
+
+Iteracion 8
+El peso de la solucion  es de 107
+El valor de la solucion es de 908
+Solucion: 10111111
+
+La solución optima pertenece a la iteracion 1 y sus datos son:
+El peso de la solucion  es de 97
+El valor de la solucion es de 858
+Solucion: 11011111
+
+Tiempo total de procesamiento: 0 segundos.
