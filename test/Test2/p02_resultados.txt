@@ -1,0 +1,38 @@
+El peso maximo que soporta la mochila es de 26.
+
+Iteracion 1
+El peso de la solucion  es de 19
+El valor de la solucion es de 37
+Solucion: 11000
+
+Iteracion 2
+El peso de la solucion  es de 19
+El valor de la solucion es de 37
+Solucion: 11000
+
+Iteracion 3
+El peso de la solucion  es de 23
+El valor de la solucion es de 47
+Solucion: 10100
+
+Iteracion 4
+El peso de la solucion  es de 20
+El valor de la solucion es de 39
+Solucion: 10010
+
+Iteracion 5
+El peso de la solucion  es de 21
+El valor de la solucion es de 40
+Solucion: 10001
+
+La solución optima pertenece a la iteracion 3 y sus datos son:
+El peso de la solucion  es de 23
+El valor de la solucion es de 47
+Solucion: 10100
+
+El valor optimo encontrado en https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html es:
+El peso de la solucion  es de 26
+El valor de la solucion es de 51
+Solucion: 01110
+
+Tiempo total de procesamiento: 0 segundos.

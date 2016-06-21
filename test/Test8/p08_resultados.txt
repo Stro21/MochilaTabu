@@ -1,4 +1,5 @@
 El peso maximo que soporta la mochila es de 6404180.
+
 Iteracion 1
 El peso de la solucion  es de 6376286
 El valor de la solucion es de 12808431
