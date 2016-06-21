@@ -120,8 +120,13 @@ El valor de la solucion es de 13830695
 Solucion: 111111111010000000100001
 
 La solución optima pertenece a la iteracion 13 y sus datos son:
-El peso de la solucion  es de 6444864
-El valor de la solucion es de 13020974
-Solucion: 111111111010010000010000
+El peso de la solucion  es de 6385018
+El valor de la solucion es de 12953974
+Solucion: 111111111010100000010000
+
+El valor optimo encontrado en https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html es:
+El peso de la solucion  es de 6402560
+El valor de la solucion es de 13549094
+Solucion: 110111000110100100000111
 
 Tiempo total de procesamiento: 0 segundos.

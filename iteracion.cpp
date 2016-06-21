@@ -23,7 +23,7 @@ Iteracion::Iteracion(vector<Objeto> obj, int peso_max)
     valor_total = valor;
 }
 
-Iteracion::Iteracion(std::vector<Objeto> obj)
+Iteracion::Iteracion(vector<Objeto> obj)
 {
     int peso = 0; 
     int valor = 0;
@@ -51,11 +51,11 @@ void Iteracion::print_solucion(ofstream& salida)
     salida << endl;
 }
 
-void Iteracion::setObjetos(std::vector<Objeto> objetos) {
+void Iteracion::setObjetos(vector<Objeto> objetos) {
     this->objetos = objetos;
 }
 
-std::vector<Objeto> Iteracion::getObjetos() const {
+vector<Objeto> Iteracion::getObjetos() const {
     return objetos;
 }
 

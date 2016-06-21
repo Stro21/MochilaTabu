@@ -75,8 +75,13 @@ El valor de la solucion es de 1305
 Solucion: 111111100000001
 
 La solución optima pertenece a la iteracion 15 y sus datos son:
-El peso de la solucion  es de 0
-El valor de la solucion es de 0
-Solucion: 
+El peso de la solucion  es de 679
+El valor de la solucion es de 1305
+Solucion: 111111100000001
+
+El valor optimo encontrado en https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html es:
+El peso de la solucion  es de 749
+El valor de la solucion es de 1458
+Solucion: 101010111000011
 
 Tiempo total de procesamiento: 0 segundos.

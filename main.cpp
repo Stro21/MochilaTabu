@@ -16,7 +16,8 @@ int main(int argc, char* argv[])
     string line;
     int peso_mochila, cantidad_objetos;
     vector<int> peso, valor;
-    vector<Objeto> tabu;
+    vector<bool> opt_esta;
+    vector<Objeto> tabu, optimo;
 //    ifstream peso_max("test/Test1/p01_c.txt");
 //    ifstream peso_objetos("test/Test1/p01_w.txt");
 //    ifstream valor_objetos("test/Test1/p01_p.txt");
@@ -40,15 +41,17 @@ int main(int argc, char* argv[])
 //    ifstream peso_max("test/Test6/p06_c.txt");
 //    ifstream peso_objetos("test/Test6/p06_w.txt");
 //    ifstream valor_objetos("test/Test6/p06_p.txt");
-//    ofstream resultado("test/Test6/p06_resultados.txt");    
+//    ofstream resultado("test/Test6/p06_resultados.txt");
 //    ifstream peso_max("test/Test7/p07_c.txt");
 //    ifstream peso_objetos("test/Test7/p07_w.txt");
 //    ifstream valor_objetos("test/Test7/p07_p.txt");
 //    ofstream resultado("test/Test7/p07_resultados.txt");    
+//    ifstream resultado_optimo("test/Test7/p07_s.txt");
     ifstream peso_max("test/Test8/p08_c.txt");
     ifstream peso_objetos("test/Test8/p08_w.txt");
     ifstream valor_objetos("test/Test8/p08_p.txt");
     ofstream resultado("test/Test8/p08_resultados.txt");
+    ifstream resultado_optimo("test/Test8/p08_s.txt");
 //Lee el archivo del peso de la mochila y lo guarda en la variable peso_mochila.   
     if(peso_max.is_open()){
         while(getline(peso_max, line)){
@@ -87,11 +90,32 @@ int main(int argc, char* argv[])
         cout << "Tienen tamaños distintos." << endl;
         return -1;
     }
+//Guarda los resultados encontrados en https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html    
+    if(resultado_optimo.is_open()){
+        while(getline(resultado_optimo, line)){
+            if(atoi(line.c_str()) == 1){
+                opt_esta.push_back(true);
+            }
+            else if(atoi(line.c_str()) == 0){
+                opt_esta.push_back(false);
+            }
+            else{
+                
+            }
+        }
+    }
+    else{
+        cout << "No se pudo abrir el archivo." << endl;
+        return -1;        
+    }
+    
 //Guarda ambos datos en vector de objetos.    
     for(int i = 0; i < cantidad_objetos; i++){
         tabu.push_back(Objeto(peso[i], valor[i]));
+        optimo.push_back(Objeto(peso[i], valor[i], opt_esta[i]));
     }
     Iteracion sol_tabu(tabu, peso_mochila);
+    Iteracion knapsack_01(optimo);
     Mochila knapsack(peso_mochila, sol_tabu);
     knapsack.llenar_soluciones();
     if(resultado.is_open()){
@@ -99,6 +123,10 @@ int main(int argc, char* argv[])
                 peso_mochila << "." << endl;
         knapsack.print_soluciones(resultado);
         knapsack.print_sol_optima(resultado);
+        resultado << "El valor optimo encontrado en https://people.sc.fsu.edu/~jburkardt/datasets/knapsack_01/knapsack_01.html es:"
+                << endl;
+        knapsack_01.print_solucion(resultado);
+        resultado << endl;
         t_fin = clock();
         segundos = (double) (t_fin - t_ini) / CLOCKS_PER_SEC;
         resultado << "Tiempo total de procesamiento: " << segundos << " segundos." << endl;
